@@ -1,0 +1,426 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #232e20,  #359974);
+}
+
+header {
+  padding: 20px 0;
+  background-color:  #361c577c;
+  border-bottom: 1px solid #4e3599,#4e3599;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: #ffea00;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #8732a8;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 13%;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+}
+
+.hero .hero-content {
+  max-width: 600px;
+  flex: 1;
+  order: 2;
+}
+
+.hero .hero-content h1 {
+  font-size: 3rem; 
+  font-weight: 600;
+  color: #341042; 
+  margin-bottom: 20px;
+  font-family: 'Chaotic Connection', sans-serif;
+}
+
+.hero .hero-content p {
+  font-size: 1.4rem; /* Трохи збільшено */
+  color:  rgba(50, 23, 84, 0.973)
+}
+
+.hero .hero-content .btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #742b8e, #8732a8);
+  color: #ffea00;
+  padding: 14px 32px; /* Збільшений розмір */
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(135, 50, 168, 0.4);
+  transition: all 0.3s ease-in-out;
+  font-size: 1.2rem; /* Збільшений шрифт */
+}
+
+.hero .hero-content .btn:hover {
+  background: linear-gradient(135deg, #8732a8, #9e4ac0);
+  box-shadow: 0 6px 18px rgba(135, 50, 168, 0.6);
+  transform: scale(1.08);
+}
+
+
+.hero .hero-image {
+  flex: 1;
+  text-align: center;
+  order: 1;
+  position: relative;
+  opacity: 1;
+  transition: transform 0.5s ease;
+}
+
+.hero .hero-image:hover {
+   transform: scale(1.2); /* Збільшуємо зображення */
+  filter: brightness(0.8); /* Зменшуємо яскравість */
+}
+
+.hero .hero-image img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Плавне збільшення зображення */
+}
+
+.hero .hero-image img:hover {
+  transform: scale(1.1); /* Збільшення зображення при наведенні */
+}
+
+.mascot{
+  font-size: 2rem; /* Збільшений розмір шрифту */
+  font-weight: 600;
+  color:  #ffea008b; /* Жовтий колір */
+  margin-bottom: 20px;
+}
+
+.hero .hero-image img {
+  max-width: 100%;
+  height: auto;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero .hero-image::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(124, 252, 0, 0.6);
+}
+
+/* Стилі для About, Comics, News */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: 'Chaotic Connection', sans-serif;
+}
+
+.nav-links a:hover {
+  color: #742b8e;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 10%;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
+.works {
+  background-color:  #200f367c;
+  border-bottom: 1px solid #4e3599,#4e3599;
+  padding: 50px 0;
+}
+
+.works h2 {
+  color: #359974;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.works .carousel-item img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.works .carousel-item img:hover {
+  transform: scale(1.05); /* Збільшуємо зображення  */
+  filter: brightness(0.85); /* Зменшуємо яскравість*/
+}
+
+
+.reverse-btn {
+  display: block;
+  width: max-content;
+  margin: 15px auto;
+  padding: 12px 24px;
+  background: #ffea00;
+  color: #361c577c;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px #361c577c;
+  transition: all 0.3s ease-in-out;
+}
+
+.reverse-btn:hover {
+  background: #361c577c;
+  color: #ffea00;
+  box-shadow: 0 6px 15px #361c577c;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .works h2 {
+    font-size: 1.8rem;
+  }
+
+  .reverse-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item img {
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.about-team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 10%;
+  background: linear-gradient(135deg, #512853c0, #7E5380);
+  color:  #f2db6a;
+  flex-wrap: wrap;
+  gap: 20px;
+  opacity: 0; /* Спочатку текст буде прозорим */
+  transform: translateX(-100%); /* Початкове положення тексту - за межами зліва */
+  animation: slideInLeft 3.5s forwards; /* Анімація для виліту */
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%); /* Текст починає зліва */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Текст стає на своє місце */
+  }
+}
+.team-content {
+  flex: 1;
+  max-width: 800px;
+  min-width: 400px;
+}
+
+.team-content h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.team-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.team-image {
+  flex: 1;
+  text-align: center;
+}
+
+.team-image img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.social-icons2 a {
+  font-size: 24px;
+  color: #f2db6a;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons2 a:hover {
+  color: #512853c0;
+}
+.main-hero {
+  background-color: #2C2724;
+  padding: 60px 0;
+}
+
+.main-hero h2 {
+  color: #CE499C;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.main-hero p {
+  color: #3C7E70;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.main-hero .main-hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.hero-text {
+  max-width: 600px;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .main-hero .main-hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .main-hero h2 {
+    font-size: 2rem;
+  }
+
+  .main-hero p {
+    font-size: 1rem;
+  }
+}
+/* Стилі для кнопки "Вгору" */
+.scroll-up-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #361c577c;
+  color: #ffea00;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-up-btn i {
+  pointer-events: none;
+}
+
+.scroll-up-btn:hover {
+  background-color: #4a2a7d;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .main-hero .main-hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .main-hero h2 {
+    font-size: 2rem;
+  }
+
+  .main-hero p {
+    font-size: 1rem;
+  }
+}
+
